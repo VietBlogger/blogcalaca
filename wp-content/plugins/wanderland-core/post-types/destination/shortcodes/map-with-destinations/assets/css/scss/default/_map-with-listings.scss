@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Map With Destinations shortcode style - begin
+   ========================================================================== */
+
+.mkdf-map-with-destinations-holder {
+    @include mkdfRelativeHolderLayout();
+
+    .mkdf-mwl-map {
+        @include mkdfRelativeHolderLayout();
+        height: 500px;
+	    
+	    @include phone-landscape {
+		    height: 400px !important; // important is set because of inline map style
+	    }
+    }
+}
+
+/* ==========================================================================
+   Map With Destinations shortcode style - end
+   ========================================================================== */

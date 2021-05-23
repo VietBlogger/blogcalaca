@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+
+.mkdf-testimonials-holder {
+    @include mkdfRelativeHolderLayout();
+    
+    .mkdf-testimonials,
+    .mkdf-testimonial-content,
+    .mkdf-testimonial-text-holder {
+        @include mkdfRelativeHolderLayout();
+    }
+
+    .mkdf-testimonials {
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+
+    .mkdf-testimonial-image {
+
+        img {
+            width: auto !important;
+            border-radius: 5em;
+        }
+    }
+}
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */

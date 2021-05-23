@@ -1,0 +1,1 @@
+<p class="mkdf-empty-cart"><?php esc_html_e( 'No products in the cart.', 'wanderland' ); ?></p>

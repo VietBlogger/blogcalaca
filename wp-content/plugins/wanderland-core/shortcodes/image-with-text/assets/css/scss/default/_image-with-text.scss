@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.mkdf-image-with-text-holder {
+    @include mkdfRelativeHolderLayout();
+	
+	&.mkdf-has-shadow {
+		
+		.mkdf-iwt-image {
+			box-shadow: $default-box-shadow;
+		}
+	}
+	
+	.mkdf-iwt-image {
+		@include mkdfRelativeHolderLayout();
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+		
+		svg, .mkdf-iwt-badge {
+			position: absolute;
+			top: -40px;
+			right: -20px;
+			width: 80px;
+			height: 80px;
+			opacity: 0;
+			transform-origin: -30px 20px;
+			transform: scale(1.2) rotate(-20deg);
+			transition: opacity .2s, transform 0s .3s;
+		}
+		
+		&:hover {
+			svg, .mkdf-iwt-badge {
+				opacity: 1;
+				transform: scale(1);
+				// transition: .3s cubic-bezier(0.35, 0.18, 0, 0.93);
+				transition: .3s cubic-bezier(0.35, 0.18, 0.41, 0.94);
+			}
+		}
+	}
+	
+	.mkdf-iwt-text-holder {
+		@include mkdfRelativeHolderLayout();
+		
+		.mkdf-iwt-highlight {
+			position: absolute;
+			display: block;
+			left: -6%;
+			top: 0;
+			width: 112%;
+			height: 32px;
+			color: #f2f1ea;
+			z-index: -1;
+			clip-path: inset(0 100% 0 0);
+			-webkit-clip-path: inset(0 100% 0 0);
+			transition: .2s;
+			
+			.mkdf-active-hover-middle {
+				position: absolute;
+				top: 0;
+				left: 5%;
+    			width: 93%;
+				height: 100%;
+				border-radius: 2px;
+				background-color: #f2f1ea;
+			}
+			
+			svg {
+				position: absolute;
+				top: 0;
+				height: 100%;
+				
+				polygon {
+					fill: #f2f1ea;
+					stroke: #f2f1ea;
+				}
+				
+				&.mkdf-active-hover-left {
+					left: 0;
+				}
+				
+				&.mkdf-active-hover-right {
+					right: 0;
+				}
+			}
+		}
+	}
+	
+	.mkdf-iwt-title {
+		margin: 40px 0 0;
+		transition: color .3s;
+		
+		.mkdf-iwt-title-wrap {
+			position: relative;
+			padding: 0 15px;
+			z-index: 1;
+		}
+	}
+	
+	.mkdf-iwt-text {
+		margin: 14px 0 0;
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-custom-link {
+		perspective: 1000px;
+		-webkit-perspective: 1000px;
+		transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+		backface-visibilitiy: hidden;
+		-webkit-backface-visibility: hidden;
+		
+		.mkdf-iwt-image {
+			
+			&:hover {
+				+ .mkdf-iwt-text-holder {
+					.mkdf-iwt-highlight {
+						clip-path: inset(0 0 0 0);
+						-webkit-clip-path: inset(0 0 0 0);
+                        transition: .6s cubic-bezier(0.23, 0.35, 0, 1.09);
+					}
+					.mkdf-iwt-title {
+						color: #5d8159;
+					}
+				}
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-lightbox {
+		
+		.mkdf-iwt-image {
+			
+			a {
+				@include mkdfImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-zoom {
+		
+		.mkdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					transform: scale(1.04);
+				}
+			}
+			
+			img {
+				transform: scale(1);
+				transition: transform .3s ease-in-out;
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-grayscale {
+		
+		.mkdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				transition: all .3s ease-in-out;
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

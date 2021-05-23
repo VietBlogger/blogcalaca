@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Destination Single navigation style - begin
+   ========================================================================== */
+
+.mkdf-ds-navigation {
+	position: relative;
+	display: table;
+	width: 100%;
+	vertical-align: middle;
+	margin: 53px 0 0;
+	padding: 30px 0;
+	border-top: 1px solid #e1e1e1;
+	clear: both;
+	box-sizing: border-box;
+	
+	.mkdf-ds-prev,
+	.mkdf-ds-next {
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		width: 49%;
+		padding: 0;
+		box-sizing: border-box;
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 16px;
+			letter-spacing: 0;
+			color: $default-heading-color;
+			text-transform: uppercase;
+			font-family: $default-heading-font;
+			font-weight: 700;
+			
+			@include phone-landscape {
+				font-size: 12px;
+			}
+			
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+		
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			
+			@include ipad-portrait {
+				display: none;
+			}
+		}
+
+		.mkdf-ps-nav-label {
+			position: relative;
+			top: 5px;
+
+			@include phone-landscape {
+				display: none;
+			}
+
+			.mkdf-chrome & {
+				top: 2px;
+			}
+		}
+		
+		.mkdf-destination-single-nav-mark {
+			font-size: 39px;
+			vertical-align: middle;
+		}
+	}
+	
+	.mkdf-ds-prev {
+		
+		img {
+			margin-right: 21px;
+		}
+		
+		.mkdf-destination-single-nav-mark {
+			margin: 0 14px 0 0;
+			
+			@include phone-landscape {
+				margin: 0 10px 0 0;
+			}
+		}
+		
+		a {
+			
+			.mkdf-ds-nav-label {
+				margin-left: 15px;
+			}
+		}
+	}
+	
+	.mkdf-ds-next {
+		text-align: right;
+		
+		img {
+			margin-left: 21px;
+		}
+		
+		.mkdf-destination-single-nav-mark {
+			margin: 0 0 0 14px;
+			
+			@include phone-landscape {
+				margin: 0 0 0 10px;
+			}
+		}
+		
+		a {
+			
+			.mkdf-ds-nav-label {
+				margin-right: 15px;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Destination Single navigation style - end
+   ========================================================================== */

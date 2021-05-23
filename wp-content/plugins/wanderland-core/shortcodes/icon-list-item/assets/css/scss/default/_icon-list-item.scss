@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Icon List Item shortcode style - begin
+   ========================================================================== */
+
+.mkdf-icon-list-holder {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    height: auto;
+    width: 100%;
+    margin-bottom: 8px;
+	
+	.mkdf-il-icon-holder,
+	.mkdf-il-text {
+		position: relative;
+		display: table-cell;
+		vertical-align: top;
+	}
+
+    .mkdf-il-icon-holder {
+	    width: 1%;
+
+		span {
+			padding-right: 6px;
+		}
+	    
+	    > * {
+		    position: relative;
+		    display: inline-block;
+		    vertical-align: middle;
+		    color: $default-heading-color;
+		    font-size: 17px;
+		    line-height: inherit;
+		
+		    &:before {
+			    display: block;
+			    line-height: inherit;
+		    }
+	    }
+    }
+
+	a {
+		display: inline-block;
+
+		&:hover {
+			.mkdf-il-text {
+				color: $first-main-color;
+
+				&:after {
+					transform: scaleX(1);
+					transform-origin: 0% 0;
+					transition: transform .5s cubic-bezier(0.45, 0.46, 0.05, 0.96);
+				}
+			}
+		}
+	}
+
+    .mkdf-il-text {
+		top: 1px;
+	    box-sizing: border-box;
+		font-size: 18px;
+		line-height: 1em;
+		font-family: $additional-font;
+		font-style: italic;
+		font-weight: 400;
+		display: table-cell;
+		position: relative;
+		vertical-align: middle;
+
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 1px;
+			width: 100%;
+			height: 1px;
+			background-color: currentColor;
+			transform: scaleX(0);
+			transform-origin: 100% 0;
+			transition: transform .3s cubic-bezier(0.45, 0.46, 0.05, 0.96);
+		}
+    }
+}
+/* ==========================================================================
+   Icon List Item shortcode style - end
+   ========================================================================== */

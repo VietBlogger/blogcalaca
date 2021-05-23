@@ -1,0 +1,671 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* ==========================================================================
+   Shortcodes responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Button shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .mkdf-btn.mkdf-btn-large, .mkdf-btn.mkdf-btn-huge {
+    padding: 10px 40px;
+  }
+}
+
+/* ==========================================================================
+   Button shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Call To Action shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (min-width: 1201px) and (max-width: 1300px) {
+  .mkdf-call-to-action-holder .mkdf-grid {
+    width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mkdf-call-to-action-holder.mkdf-three-quarters-columns .mkdf-cta-text-holder, .mkdf-call-to-action-holder.mkdf-four-fifths-columns .mkdf-cta-text-holder {
+    width: 66.66666666666667%;
+  }
+  .mkdf-call-to-action-holder.mkdf-three-quarters-columns .mkdf-cta-button-holder, .mkdf-call-to-action-holder.mkdf-four-fifths-columns .mkdf-cta-button-holder {
+    width: 33.33333333333333%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-call-to-action-holder.mkdf-normal-layout .mkdf-cta-inner,
+  .mkdf-call-to-action-holder.mkdf-normal-layout .mkdf-cta-text-holder,
+  .mkdf-call-to-action-holder.mkdf-normal-layout .mkdf-cta-button-holder {
+    display: block;
+  }
+  .mkdf-call-to-action-holder.mkdf-normal-layout .mkdf-cta-button-holder {
+    margin: 28px 0 0;
+    text-align: initial;
+  }
+  .mkdf-call-to-action-holder.mkdf-two-halves-columns .mkdf-cta-text-holder,
+  .mkdf-call-to-action-holder.mkdf-two-halves-columns .mkdf-cta-button-holder, .mkdf-call-to-action-holder.mkdf-two-thirds-columns .mkdf-cta-text-holder,
+  .mkdf-call-to-action-holder.mkdf-two-thirds-columns .mkdf-cta-button-holder, .mkdf-call-to-action-holder.mkdf-three-quarters-columns .mkdf-cta-text-holder,
+  .mkdf-call-to-action-holder.mkdf-three-quarters-columns .mkdf-cta-button-holder, .mkdf-call-to-action-holder.mkdf-four-fifths-columns .mkdf-cta-text-holder,
+  .mkdf-call-to-action-holder.mkdf-four-fifths-columns .mkdf-cta-button-holder {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Call To Action shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Countdown shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  .mkdf-countdown .countdown-row .countdown-section .countdown-amount {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-countdown .countdown-row.countdown-show4 .countdown-section, .mkdf-countdown .countdown-row.countdown-show5 .countdown-section, .mkdf-countdown .countdown-row.countdown-show6 .countdown-section {
+    width: 33.33333333333333%;
+  }
+  .mkdf-countdown .countdown-row .countdown-section .countdown-amount {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-countdown .countdown-row .countdown-section .countdown-amount {
+    font-size: 40px;
+  }
+}
+
+/* ==========================================================================
+   Countdown shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Custom Font shortcode responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .mkdf-custom-font-holder.mkdf-disable-title-break br {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Custom Font shortcode responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Elements Holder shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1366px) {
+  .mkdf-elements-holder.mkdf-responsive-mode-1366.mkdf-two-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1366.mkdf-three-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1366.mkdf-four-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1366.mkdf-five-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1366.mkdf-six-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1366.mkdf-one-column-alignment-left .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: left;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1366.mkdf-one-column-alignment-right .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: right;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1366.mkdf-one-column-alignment-center .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-elements-holder.mkdf-responsive-mode-1024.mkdf-two-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1024.mkdf-three-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1024.mkdf-four-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1024.mkdf-five-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1024.mkdf-six-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1024.mkdf-one-column-alignment-left .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: left;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1024.mkdf-one-column-alignment-right .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: right;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-1024.mkdf-one-column-alignment-center .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-elements-holder.mkdf-responsive-mode-768.mkdf-two-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-768.mkdf-three-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-768.mkdf-four-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-768.mkdf-five-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-768.mkdf-six-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-768.mkdf-one-column-alignment-left .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: left;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-768.mkdf-one-column-alignment-right .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: right;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-768.mkdf-one-column-alignment-center .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-elements-holder.mkdf-responsive-mode-680.mkdf-two-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-680.mkdf-three-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-680.mkdf-four-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-680.mkdf-five-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-680.mkdf-six-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-680.mkdf-one-column-alignment-left .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: left;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-680.mkdf-one-column-alignment-right .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: right;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-680.mkdf-one-column-alignment-center .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mkdf-elements-holder.mkdf-responsive-mode-480.mkdf-two-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-480.mkdf-three-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-480.mkdf-four-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-480.mkdf-five-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-480.mkdf-six-columns .mkdf-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-480.mkdf-one-column-alignment-left .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: left;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-480.mkdf-one-column-alignment-right .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: right;
+  }
+  .mkdf-elements-holder.mkdf-responsive-mode-480.mkdf-one-column-alignment-center .mkdf-eh-item .mkdf-eh-item-content {
+    text-align: center;
+  }
+  .mkdf-elements-holder .mkdf-eh-item-content {
+    padding: 0 10px;
+  }
+}
+
+/* ==========================================================================
+   Elements Holder shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Google Map shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .mkdf-google-map-overlay {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Google Map shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Horizontal Timeline shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .mkdf-horizontal-timeline .mkdf-ht-content {
+    margin-top: 50px;
+  }
+  .mkdf-horizontal-timeline .mkdf-ht-content .mkdf-hti-content-inner.mkdf-timeline-has-image > * {
+    width: 100%;
+    float: none;
+  }
+  .mkdf-horizontal-timeline .mkdf-ht-content .mkdf-hti-content-inner.mkdf-timeline-has-image .mkdf-hti-content-value {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-horizontal-timeline {
+    left: 10px;
+  }
+}
+
+/* ==========================================================================
+   Horizontal Timeline shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Process shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1366px) {
+  .mkdf-process-holder.mkdf-responsive-1366 .mkdf-mark-horizontal-holder {
+    display: none;
+  }
+  .mkdf-process-holder.mkdf-responsive-1366 .mkdf-mark-vertical-holder {
+    display: block;
+  }
+  .mkdf-process-holder.mkdf-responsive-1366 .mkdf-process-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0 0 0 76px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .mkdf-process-holder.mkdf-responsive-1366 .mkdf-process-item {
+    width: 100%;
+    float: none;
+    padding: 0;
+    text-align: inherit;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-process-holder.mkdf-responsive-1024 .mkdf-mark-horizontal-holder {
+    display: none;
+  }
+  .mkdf-process-holder.mkdf-responsive-1024 .mkdf-mark-vertical-holder {
+    display: block;
+  }
+  .mkdf-process-holder.mkdf-responsive-1024 .mkdf-process-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0 0 0 76px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .mkdf-process-holder.mkdf-responsive-1024 .mkdf-process-item {
+    width: 100%;
+    float: none;
+    padding: 0;
+    text-align: inherit;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-process-holder.mkdf-responsive-768 .mkdf-mark-horizontal-holder {
+    display: none;
+  }
+  .mkdf-process-holder.mkdf-responsive-768 .mkdf-mark-vertical-holder {
+    display: block;
+  }
+  .mkdf-process-holder.mkdf-responsive-768 .mkdf-process-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0 0 0 76px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .mkdf-process-holder.mkdf-responsive-768 .mkdf-process-item {
+    width: 100%;
+    float: none;
+    padding: 0;
+    text-align: inherit;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-process-holder.mkdf-responsive-680 .mkdf-mark-horizontal-holder {
+    display: none;
+  }
+  .mkdf-process-holder.mkdf-responsive-680 .mkdf-mark-vertical-holder {
+    display: block;
+  }
+  .mkdf-process-holder.mkdf-responsive-680 .mkdf-process-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0 0 0 76px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .mkdf-process-holder.mkdf-responsive-680 .mkdf-process-item {
+    width: 100%;
+    float: none;
+    padding: 0;
+    text-align: inherit;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mkdf-process-holder.mkdf-responsive-480 .mkdf-mark-horizontal-holder {
+    display: none;
+  }
+  .mkdf-process-holder.mkdf-responsive-480 .mkdf-mark-vertical-holder {
+    display: block;
+  }
+  .mkdf-process-holder.mkdf-responsive-480 .mkdf-process-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0 0 0 76px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .mkdf-process-holder.mkdf-responsive-480 .mkdf-process-item {
+    width: 100%;
+    float: none;
+    padding: 0;
+    text-align: inherit;
+  }
+}
+
+/* ==========================================================================
+   Process shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Section Title shortcode responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .mkdf-section-title-holder {
+    padding: 0 !important;
+  }
+  .mkdf-section-title-holder.mkdf-st-disable-title-break .mkdf-st-title br {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Section Title shortcode responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Split Section responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1366px) {
+  .mkdf-ss-holder.mkdf-ss-break-1366.mkdf-ss-image-right .mkdf-ss-image {
+    position: relative;
+    left: 0;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-1366 .mkdf-ss-content {
+    left: 0;
+    width: 100%;
+    padding: 25px;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-1366 .mkdf-ss-image {
+    position: relative;
+    width: 100%;
+    background-image: none !important;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-1366 .mkdf-ss-image img {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-ss-holder.mkdf-ss-break-1024.mkdf-ss-image-right .mkdf-ss-image {
+    position: relative;
+    left: 0;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-1024 .mkdf-ss-content {
+    left: 0;
+    width: 100%;
+    padding: 25px;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-1024 .mkdf-ss-image {
+    position: relative;
+    width: 100%;
+    background-image: none !important;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-1024 .mkdf-ss-image img {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-ss-holder.mkdf-ss-break-768.mkdf-ss-image-right .mkdf-ss-image {
+    position: relative;
+    left: 0;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-768 .mkdf-ss-content {
+    left: 0;
+    width: 100%;
+    padding: 25px;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-768 .mkdf-ss-image {
+    position: relative;
+    width: 100%;
+    background-image: none !important;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-768 .mkdf-ss-image img {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-ss-holder.mkdf-ss-break-680.mkdf-ss-image-right .mkdf-ss-image {
+    position: relative;
+    left: 0;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-680 .mkdf-ss-content {
+    left: 0;
+    width: 100%;
+    padding: 25px;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-680 .mkdf-ss-image {
+    position: relative;
+    width: 100%;
+    background-image: none !important;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-680 .mkdf-ss-image img {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mkdf-ss-holder.mkdf-ss-break-480.mkdf-ss-image-right .mkdf-ss-image {
+    position: relative;
+    left: 0;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-480 .mkdf-ss-content {
+    left: 0;
+    width: 100%;
+    padding: 25px;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-480 .mkdf-ss-image {
+    position: relative;
+    width: 100%;
+    background-image: none !important;
+  }
+  .mkdf-ss-holder.mkdf-ss-break-480 .mkdf-ss-image img {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Split Section responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Tabs shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .mkdf-tabs.mkdf-tabs-standard .mkdf-tabs-nav li a {
+    padding: 7px 21px;
+  }
+  .mkdf-tabs.mkdf-tabs-boxed .mkdf-tabs-nav li {
+    margin: 0 8px 0 0;
+  }
+  .mkdf-tabs.mkdf-tabs-boxed .mkdf-tabs-nav li a {
+    padding: 7px 18px;
+  }
+  .mkdf-tabs.mkdf-tabs-simple .mkdf-tabs-nav li {
+    margin: 0 26px 0 0;
+  }
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tabs-nav {
+    width: 180px;
+  }
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tab-container {
+    width: calc(100% - 180px);
+    padding: 0 0 0 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-tabs.mkdf-tabs-standard .mkdf-tabs-nav li {
+    display: block;
+    float: none;
+  }
+  .mkdf-tabs.mkdf-tabs-standard .mkdf-tabs-nav li a {
+    width: 100%;
+  }
+  .mkdf-tabs.mkdf-tabs-boxed .mkdf-tabs-nav li {
+    display: block;
+    float: none;
+    margin: 0 0 8px;
+  }
+  .mkdf-tabs.mkdf-tabs-boxed .mkdf-tabs-nav li a {
+    width: 100%;
+  }
+  .mkdf-tabs.mkdf-tabs-simple .mkdf-tabs-nav li {
+    margin: 0 20px 0 0;
+  }
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tabs-nav,
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tab-container {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tabs-nav {
+    border-right: 0;
+  }
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tabs-nav li {
+    float: left;
+    margin: 0 20px 0 0;
+  }
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tab-container {
+    padding: 31px 0 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-tabs.mkdf-tabs-simple .mkdf-tabs-nav {
+    padding: 0 0 20px;
+  }
+  .mkdf-tabs.mkdf-tabs-simple .mkdf-tabs-nav li {
+    display: block;
+    float: none;
+    margin: 0 0 20px;
+  }
+  .mkdf-tabs.mkdf-tabs-simple .mkdf-tabs-nav li a {
+    padding: 0;
+    width: 100%;
+  }
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tabs-nav li {
+    display: block;
+    float: none;
+    margin: 0 0 20px;
+  }
+  .mkdf-tabs.mkdf-tabs-vertical .mkdf-tabs-nav li a {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Tabs shortcode responsive style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/wanderland-core/assets/css/shortcodes-map-responsive.css.map */

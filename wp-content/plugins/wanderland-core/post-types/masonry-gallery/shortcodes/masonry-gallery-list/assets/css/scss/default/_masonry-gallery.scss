@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Masonry Gallery shortcodes style - begin
+   ========================================================================== */
+
+.mkdf-masonry-gallery-holder {
+	@include mkdfRelativeHolderLayout(top);
+	
+	.mkdf-mg-inner {
+		opacity: 0;
+	}
+	
+	.mkdf-mg-grid-gutter {
+		width: 0;
+	}
+	
+	.mkdf-mg-grid-sizer {
+		width: 25%;
+	}
+
+	.mkdf-mg-item {
+		position: relative;
+		width: 25%;
+		overflow: hidden;
+		box-sizing: border-box;
+		
+		.mkdf-mg-item-inner {
+			@include mkdfRelativeHolderLayout(top);
+			height: 100%;
+		}
+		
+		.mkdf-mg-item-image {
+			@include mkdfRelativeHolderLayout(top);
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			img {
+				visibility: hidden;
+			}
+		}
+		
+		.mkdf-mg-item-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		.mkdf-mg-item-icon {
+			margin-bottom: 10px;
+		}
+		
+		.mkdf-mg-item-title {
+			margin: 0;
+		}
+		
+		.mkdf-mg-item-text {
+			margin: 14px 0 0;
+		}
+		
+		.mkdf-mg-item-button {
+			margin: 21px 0 0;
+		}
+		
+		.mkdf-mg-item-link {
+			@include mkdfAbsoluteHolderLayout();
+			z-index: 2;
+		}
+		
+		&.mkdf-mg-skin-light {
+			
+			.mkdf-mg-item-title,
+			.mkdf-mg-item-text,
+			.mkdf-mg-item-button {
+				color: #fff;
+			}
+		}
+		
+		&.mkdf-masonry-size-large-width,
+		&.mkdf-masonry-size-large-width-height {
+			width: 50%;
+		}
+	}
+}
+
+/* ==========================================================================
+   Masonry Gallery shortcodes style - end
+   ========================================================================== */

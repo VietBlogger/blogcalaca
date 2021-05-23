@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.mkdf-pricing-tables {
+    @include mkdfRelativeHolderLayout();
+}
+
+.mkdf-price-table {
+
+    .mkdf-pt-inner {
+        @include mkdfRelativeHolderLayout();
+        background-color: #f9f9f9;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 17px 30px;
+                text-align: center;
+
+                &.mkdf-pt-title-holder {
+                    position: relative;
+                    color: $default-heading-color;
+                    font-size: 18px;
+                    line-height: 26px;
+                    font-weight: 600;
+	                letter-spacing: 1px;
+	                
+                    .mkdf-pt-title {
+                        display: block;
+	                    padding: 17px 0 32px;
+	                    border-bottom: 1px solid #7d7d7d;
+	                    box-sizing: border-box;
+                    }
+                }
+
+                &.mkdf-pt-prices {
+                    position: relative;
+					padding: 33px 15px 0;
+	                
+                    .mkdf-pt-value {
+                        position: relative;
+                        vertical-align: super;
+                        bottom: 2px;
+                        font-size: 24px;
+                        line-height: 1em;
+                        font-weight: 600;
+                        color: $default-heading-color;
+                    }
+
+                    .mkdf-pt-price {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+	                    left: -5px;
+                        font-size: 48px;
+                        line-height: 1em;
+                        font-weight: 600;
+                        color: $default-heading-color;
+                    }
+
+                    .mkdf-pt-mark {
+                        position: relative;
+                        display: block;
+	                    margin: 1px 0 0;
+                    }
+                }
+
+                &.mkdf-pt-content {
+	                padding: 16px 15px;
+                }
+
+                &.mkdf-pt-button {
+                    padding: 28px 15px 70px;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */

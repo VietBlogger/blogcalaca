@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - begin
+   ========================================================================== */
+
+.mkdf-destination-list-holder {
+	
+	&.mkdf-dl-has-shadow {
+		
+		.mkdf-dl-item-inner {
+			box-shadow: $default-box-shadow;
+		}
+	}
+	
+	article {
+		
+		.mkdf-dl-item-inner {
+			overflow: hidden;
+		}
+		
+		.mkdf-dli-text {
+			
+			.mkdf-dli-category-holder {
+				
+				a {
+					color: #878787;
+					
+					&:hover {
+						color: $first-main-color;
+					}
+				}
+			}
+		}
+	}
+	
+	.mkdf-dli-text-holder {
+		@include mkdfAbsoluteHolderLayout();
+		padding: 20px;
+		text-align: center;
+		box-sizing: border-box;
+		transition: opacity .2s ease-in-out;
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - end
+   ========================================================================== */

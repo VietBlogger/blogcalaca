@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Image Showcase shortcode style - begin
+   ========================================================================== */
+
+.mkdf-image-showcase {
+	position: relative;
+
+	&.mkdf-is-full-height {
+
+		@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: calc(100% - 44px);
+
+			@include laptop-landscape-large {
+				width: calc(100% - 25px);
+			}
+
+			@include laptop-landscape-mac {
+				width: calc(100% - 22px);
+			}
+
+			@include laptop-landscape-medium {
+				width: calc(100% - 20px);
+			}
+
+			@include laptop-landscape {
+				width: calc(100% - 17px);
+			}
+		}
+
+		.owl-stage {
+			pointer-events: none;
+		}
+
+		.owl-nav {
+
+			.owl-next {
+
+				span {
+					transition: .2s;
+
+					&:hover {
+						transform: translateX(2px);
+					}
+				}	
+			}
+
+			.owl-prev {
+
+				span {
+					transition: .2s;
+
+					&:hover {
+						transform: translateX(-2px);
+					}
+				}
+			}
+		}
+
+		.owl-item.active .mkdf-is-item .mkdf-is-image {
+			animation: mkdf-animate-image-showcase-in 1s forwards;
+		}
+
+		.mkdf-is-item {
+
+			.mkdf-is-image {
+				transform-origin: left;
+				animation: mkdf-animate-image-showcase-out 1.2s;
+
+				img {
+					display: none;
+
+					@include ipad-landscape {
+						display: block;
+					}
+				}
+			}
+		}
+
+		@keyframes mkdf-animate-image-showcase-in {
+			0% {
+				transform: scale(1.07);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		@keyframes mkdf-animate-image-showcase-out {
+			0% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+	}
+
+	.owl-item.active {
+
+		.mkdf-is-item {
+	
+			.mkdf-is-info {
+				animation: mkdf-animate-is-info-in .8s forwards;
+			}
+		}
+	}
+
+	.mkdf-is-item {
+		position: relative;
+
+		.mkdf-is-image {
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			a, img {
+				position: relative;
+				display: block;
+			}
+		}
+
+		.mkdf-is-info {
+			display: block;
+			width: 66%;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background-color: $default-background-color;
+			box-shadow: 0 8px 22.99995px 4.00005px rgba(0, 0, 0, 0.05);
+
+			&.mkdf-is-info-dark-skin {
+				color: $default-heading-color;
+			}
+
+			&.mkdf-is-info-light-skin {
+				color: #fff;
+			}
+
+			@include laptop-landscape-mac {
+				width: 72%;
+			}
+
+			@include laptop-landscape-medium {
+				width: 77%;
+			}
+
+			@include phone-landscape {
+				position: relative;
+				width: 100%;
+			}
+		}
+	}
+
+	@keyframes mkdf-animate-is-info-in {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+
+	.mkdf-owl-slider {
+
+		.owl-nav {
+			position: absolute;
+			left: 5px;
+			bottom: 5px;
+			background-color: $first-main-color;
+			box-sizing: border-box;
+			z-index: 1;
+
+	        .owl-prev,
+	        .owl-next {
+	            position: relative;
+	            top: auto;
+	            color: #fff;
+		        transform: none;
+				cursor: pointer;
+
+				>svg {
+					display: none;
+				}
+
+	            > span {
+	                font-size: 40px;
+
+		            &:before {
+			            font-weight: inherit !important;
+		            }
+	            }
+	        }
+
+	        .owl-prev {
+	            left: auto;
+				padding: 10px 20px;
+				position: relative;
+
+				&:after {
+					content: '';
+					right: -1px;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 1px;
+					height: 70%;
+					background-color: rgba(255,255,255, .6);
+					position: absolute;
+				}
+	        }
+
+	        .owl-next {
+				right: auto;
+				padding: 10px 20px;
+	        }
+	    }
+
+		.owl-dots {
+			position: absolute;
+			left: 50%;
+		    margin: 23px 0 0;
+			transform: translateX(-50%);
+		}
+	}
+}
+/* ==========================================================================
+   Image Showcase shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,1 @@
+<?php do_action( 'wanderland_mikado_get_footer_template' );

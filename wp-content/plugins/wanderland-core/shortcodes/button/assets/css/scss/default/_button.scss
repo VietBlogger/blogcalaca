@@ -1,0 +1,319 @@
+/* ==========================================================================
+   Button shortcode style - begin
+   ========================================================================== */
+
+.mkdf-btn {
+    @include mkdfButtonDefaultStyle();
+    @include mkdfButtonSize();
+    cursor: pointer;
+    
+    &.mkdf-btn-simple {
+        padding: 0 !important;
+        color: $default-heading-color;
+        background-color: transparent;
+        border: 0;
+        vertical-align: middle;
+
+        .mkdf-btn-text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:not(.mkdf-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $default-heading-color !important;
+        }
+
+        &:not(.mkdf-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: transparent !important;
+        }
+
+        &:not(.mkdf-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: transparent !important;
+        }
+    }
+
+    &.mkdf-btn-solid {
+        @include mkdfButtonSolidColor();
+
+        &:not(.mkdf-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.mkdf-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $first-main-color !important;
+        }
+
+        &:not(.mkdf-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $first-main-color !important;
+        }
+    }
+
+    &.mkdf-btn-outline {
+	    @include mkdfButtonOutlineColor();
+
+        &:not(.mkdf-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.mkdf-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $first-main-color !important;
+        }
+
+        &:not(.mkdf-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $first-main-color !important;
+        }
+    }
+    
+    &.mkdf-btn-small {
+        @include mkdfButtonSize(small);
+    }
+    
+    &.mkdf-btn-large {
+        @include mkdfButtonSize(large);
+    }
+    
+    &.mkdf-btn-huge {
+        @include mkdfButtonSize(huge);
+    }
+
+    &.mkdf-btn-icon {
+        overflow: hidden;
+        
+        &.mkdf-btn-simple {
+            
+            &:after {
+                content: none !important;
+            }
+
+            > i,
+            > span:not(.mkdf-btn-text) {
+
+                &:nth-child(2) {
+                    position: absolute !important;
+                    transform: translateX(-800%);
+                    transition: .3s;
+                    left: 38%;
+                }
+            }
+
+            &:hover {
+
+                > i,
+                > span:not(.mkdf-btn-text){
+    
+                    &:nth-child(2) {
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+
+        &.mkdf-btn-solid, &.mkdf-btn-outline {
+            padding: 11px 41px;
+            border: none !important;
+        }
+
+        &:after {
+            content: "";
+            @include mkdfAbsoluteHolderLayout();
+            background-color: #3c553a;
+            transform: translateX(-102%);
+            transform-origin: left;
+            transition: .4s cubic-bezier(0.18, 0.24, 0.18, 0.89);
+        }
+
+        .mkdf-btn-text {
+            display: inline-block;
+            transition: .3s;
+        }
+
+        > i,
+        > span:not(.mkdf-btn-text) {
+            position: relative !important;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0 0 4px;
+            font-size: 1.9em;
+            line-height: inherit;
+            transition: .3s;
+
+            &:nth-child(2) {
+                position: absolute!important;
+                transform: translateX(-800%);
+                transition: .3s;
+                left: 44%;
+            }
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+
+        &:hover {
+
+            .mkdf-btn-text {
+                transform: translateX(18px);
+                opacity: .1;
+            }
+
+            > i,
+            > span:not(.mkdf-btn-text) {
+                transform: translateX(400%);
+
+                &:nth-child(2) {
+                    transform: translateX(0);
+                    transition: .3s .05s;
+                }
+            }
+
+            &:after {
+                transform: translateX(101%);
+            }
+        }
+    }
+    
+    &.mkdf-btn-svg-icon {
+        overflow: hidden;
+    
+        &.mkdf-btn-simple {
+        
+            &:after {
+                content: none !important;
+            }
+            
+            svg {
+                vertical-align: middle;
+                &:nth-child(2) {
+                    position: absolute !important;
+                    transform: translateX(-800%);
+                    transition: .3s;
+                    left: 40%;
+                }
+            }
+        
+            &:hover {
+                
+                svg {
+                
+                    &:nth-child(2) {
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    
+        &.mkdf-btn-solid, &.mkdf-btn-outline {
+            padding: 11px 41px;
+            border: none !important;
+            
+            svg {
+                vertical-align: baseline;
+            }
+        }
+    
+        &:after {
+            content: "";
+            @include mkdfAbsoluteHolderLayout();
+            background-color: #3c553a;
+            transform: translateX(-102%);
+            transform-origin: left;
+            transition: .4s cubic-bezier(0.18, 0.24, 0.18, 0.89);
+        }
+    
+        .mkdf-btn-text {
+            display: inline-block;
+            transition: .3s;
+        }
+        
+        svg {
+            position: relative !important;
+            display: inline-block;
+            margin: 0 0 0 4px;
+            font-size: 1.9em;
+            line-height: inherit;
+            transition: .3s;
+        
+            &:nth-child(2) {
+                position: absolute!important;
+                transform: translateX(-800%);
+                transition: .3s;
+                left: 44%;
+                top: calc(50% - 7px);
+            }
+        
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+            
+            path,
+            line {
+                fill:none;
+                stroke: currentColor;
+                stroke-width:2;
+                stroke-miterlimit:10;
+            }
+        }
+    
+        svg {
+            &:nth-child(2) {
+                transform: translateX(-800%);
+            }
+        }
+    
+        svg {
+            width: 15px;
+            height: 15px;
+            vertical-align: middle;
+            overflow: visible;
+            transform: translateX(0);
+
+            g {
+                transform: rotate(0deg);
+                transform-origin: center;
+                transition: .2s;
+            }
+        }
+    
+        &:hover {
+        
+            .mkdf-btn-text {
+                transform: translateX(18px);
+                opacity: .1;
+                transition: .3s .2s;
+            }
+            
+            svg {
+                transform: translateX(400%);
+                transition: .3s .2s;
+
+                g {
+                    transform: rotate(45deg);
+                }
+            
+                &:nth-child(2) {
+                    transform: translateX(0);
+                    transition: .3s .2s !important;
+                }
+            }
+        
+            &:after {
+                transform: translateX(101%);
+                transition: .4s .2s cubic-bezier(0.18, 0.24, 0.18, 0.89);
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Button shortcode style - end
+   ========================================================================== */

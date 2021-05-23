@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Destination Category List shortcode style - begin
+   ========================================================================== */
+
+.mkdf-destination-category-list-holder {
+    @include mkdfRelativeHolderLayout();
+
+    article {
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+
+	    .mkdf-dcl-item-inner {
+		    @include mkdfRelativeHolderLayout();
+		    padding: 30px 20px 20px;
+		    box-sizing: border-box;
+		    overflow: hidden;
+	    }
+	    
+	    .mkdf-dcli-image {
+		    @include mkdfRelativeHolderLayout();
+		    @include mkdfSVGbg(currentColor);
+		    
+		    img {
+			    display: block;
+			    margin: 0 auto;
+			    opacity: 1;
+			    will-change: opacity;
+			    transition: opacity .5s;
+			
+			    &:nth-child(2) {
+				    position: absolute;
+				    top: 0;
+				    left: 50%;
+				    width: auto;
+				    opacity: 0;
+				    transform: translateX(-50%);
+			    }
+		    }
+		    
+		    .mkdf-dcl-highlight {
+			    position: absolute;
+			    display: block;
+			    left: 1%;
+    			width: 97%;
+			    height: 42px;
+			    color: #f2f1ea;
+			    z-index: -1;
+			    top: calc(50% - 21px);
+			    transform: rotate(-4deg);
+				transition: .5s cubic-bezier(0.28, 1.15, 0.58, 1);
+				clip-path: inset(0 100% 0 0);
+				-webkit-clip-path: inset(0 100% 0 0);
+
+				.mkdf-active-hover-middle {
+					left: 14px;
+					width: 80%;
+
+					@include ipad-landscape {
+						width: 90%;
+					}
+				}
+
+				svg.mkdf-active-hover-left {
+					left: -2px;
+				}
+
+				svg.mkdf-active-hover-right {
+					right: 0;
+				}
+		    }
+	    }
+	    
+	    &:hover {
+		    .mkdf-dcli-image {
+			
+			    .mkdf-dcl-highlight {
+				    clip-path: inset(0 0 0 0);
+				    -webkit-clip-path: inset(0 0 0 0);
+			    }
+			    img {
+				    &:nth-child(1) {
+					    opacity: 0;
+				    }
+				
+				    &:nth-child(2) {
+					    opacity: 1;
+				    }
+			    }
+		    }
+	    }
+	
+	    .mkdf-dcli-text-holder {
+		    @include mkdfRelativeHolderLayout();
+		    text-align: center;
+		    box-sizing: border-box;
+		    transition: opacity .2s ease-in-out;
+	    }
+
+	    .mkdf-dcli-text-wrapper {
+	        @include mkdfTableLayout();
+	    }
+
+	    .mkdf-dcli-text {
+		    @include mkdfTableCellLayout();
+	    }
+	    
+	    .mkdf-dcli-count {
+		    margin: 12px 0 5px;
+	    }
+	
+	    .mkdf-dcli-title {
+		    margin: 0;
+	    }
+	    
+	    .mkdf-dcli-excerpt {
+		    margin: 3px 0 0;
+	    }
+	    
+	    .mkdf-dcli-link {
+		    @include mkdfAbsoluteHolderLayout();
+		    z-index: 10;
+	    }
+    }
+}
+
+/* ==========================================================================
+   Portfolio Category List shortcode style - end
+   ========================================================================== */

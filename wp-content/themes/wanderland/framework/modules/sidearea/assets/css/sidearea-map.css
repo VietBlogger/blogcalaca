@@ -1,0 +1,411 @@
+/* ==========================================================================
+   Side area styles - begin
+   ========================================================================== */
+/* ==========================================================================
+# Side area style - begin
+========================================================================== */
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener,
+.mkdf-light-header .mkdf-top-bar .mkdf-side-menu-button-opener {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener.opened, .mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener:hover,
+.mkdf-light-header .mkdf-top-bar .mkdf-side-menu-button-opener.opened,
+.mkdf-light-header .mkdf-top-bar .mkdf-side-menu-button-opener:hover {
+  color: #fff !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener,
+.mkdf-dark-header .mkdf-top-bar .mkdf-side-menu-button-opener {
+  color: #1e1e1e !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener.opened, .mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener:hover,
+.mkdf-dark-header .mkdf-top-bar .mkdf-side-menu-button-opener.opened,
+.mkdf-dark-header .mkdf-top-bar .mkdf-side-menu-button-opener:hover {
+  color: #1e1e1e !important;
+}
+
+.mkdf-side-menu-button-opener {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mkdf-side-menu-button-opener .mkdf-side-menu-title {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 8px 0 0;
+  color: currentColor;
+}
+
+.mkdf-side-menu-button-opener .mkdf-side-menu-icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  top: -1px;
+}
+
+.mkdf-side-menu-button-opener.opened, .mkdf-side-menu-button-opener:hover {
+  color: #59815b;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-icon-pack .mkdf-side-menu-icon {
+  font-size: 20px;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-icon-pack .mkdf-side-menu-icon * {
+  display: block;
+  line-height: inherit;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-icon-pack .mkdf-side-menu-icon *:before {
+  display: block;
+  line-height: inherit;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-svg-path .mkdf-side-menu-icon > * {
+  vertical-align: middle;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-svg-path .mkdf-side-menu-icon > *,
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-svg-path .mkdf-side-menu-icon path {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined {
+  line-height: 1;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined:hover {
+  color: #383838;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined:hover .mkdf-hm-lines .mkdf-hm-line.mkdf-line-2 {
+  -webkit-transform: translateX(-7px);
+  -ms-transform: translateX(-7px);
+  transform: translateX(-7px);
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined .mkdf-hm-lines {
+  position: relative;
+  display: block;
+  width: 31px;
+  height: 15px;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined .mkdf-hm-lines .mkdf-hm-line {
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: currentColor;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined .mkdf-hm-lines .mkdf-hm-line.mkdf-line-1 {
+  top: 0;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined .mkdf-hm-lines .mkdf-hm-line.mkdf-line-2 {
+  top: 6px;
+  width: 24px;
+  left: auto;
+  right: 0;
+}
+
+.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined .mkdf-hm-lines .mkdf-hm-line.mkdf-line-3 {
+  bottom: 0;
+}
+
+.mkdf-side-menu {
+  position: fixed;
+  top: 0;
+  right: -512px;
+  width: 512px;
+  height: 100%;
+  min-height: 100%;
+  padding: 95px 5% 140px;
+  background-color: #fff;
+  text-align: left;
+  overflow: hidden;
+  visibility: hidden;
+  z-index: 9999;
+  -webkit-backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  background-image: url("../../../../../assets/img/side_bg.svg");
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1366px) {
+  .mkdf-side-menu {
+    padding: 55px 5% 120px;
+  }
+}
+
+.mkdf-side-menu .mkdf-side-menu-wrapper {
+  height: 100%;
+}
+
+.mkdf-side-menu .mkdf-side-area-bottom {
+  position: absolute;
+  bottom: 85px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 105px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1366px) {
+  .mkdf-side-menu .mkdf-side-area-bottom {
+    bottom: 55px;
+  }
+}
+
+.mkdf-side-menu .mkdf-side-area-bottom .mkdf-social-icons-group-widget .mkdf-widget-title {
+  font-style: italic;
+  font-size: 18px;
+  font-family: "Crimson Text", serif;
+  color: #878787;
+  text-transform: none;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.mkdf-side-menu .mkdf-side-area-bottom .mkdf-social-icons-group-widget .mkdf-widget-title:after {
+  display: none;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu {
+  position: absolute;
+  top: 40px;
+  right: 70px;
+  display: block;
+  z-index: 1000;
+  color: #1e1e1e;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu:hover {
+  color: #878787;
+}
+
+.admin-bar .mkdf-side-menu a.mkdf-close-side-menu {
+  top: 58px;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-icon-pack {
+  font-size: 20px;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-icon-pack * {
+  display: block;
+  line-height: inherit;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-icon-pack *:before {
+  display: block;
+  line-height: inherit;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-svg-path > * {
+  vertical-align: middle;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-svg-path > *,
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-svg-path path {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-predefined {
+  font-size: 40px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-predefined svg {
+  width: 32px;
+  overflow: visible;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-predefined svg line {
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-predefined:hover {
+  color: #383838;
+}
+
+.mkdf-side-menu a.mkdf-close-side-menu.mkdf-close-side-menu-predefined:hover svg line:nth-child(3) {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */
+/* ==========================================================================
+# Side area slides over content style - begin
+========================================================================== */
+.mkdf-right-side-menu-opened .mkdf-wrapper,
+.mkdf-right-side-menu-opened footer.mkdf-footer-uncover,
+.mkdf-right-side-menu-opened .mkdf-fixed-wrapper.fixed,
+.mkdf-right-side-menu-opened .mkdf-sticky-header,
+.mkdf-right-side-menu-opened .mobile-header-appear .mkdf-mobile-header-inner {
+  left: 0;
+}
+
+.mkdf-side-menu-slide-from-right .mkdf-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mkdf-side-menu-slide-from-right .mkdf-wrapper .mkdf-cover {
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: opacity 0.2s ease-in-out, z-index 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out, z-index 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, z-index 0.2s ease-in-out;
+}
+
+.mkdf-side-menu-slide-from-right .mkdf-sticky-header,
+.mkdf-side-menu-slide-from-right .mkdf-fixed-wrapper.fixed {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mkdf-side-menu-slide-from-right footer.mkdf-footer-uncover {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mkdf-side-menu-slide-from-right.mkdf-right-side-menu-opened .mkdf-cover {
+  z-index: 1002;
+  opacity: 1;
+}
+
+.mkdf-side-menu-slide-from-right.mkdf-right-side-menu-opened .mkdf-side-menu {
+  right: 0;
+  visibility: visible;
+}
+
+/* ==========================================================================
+# Side area slides over content style - end
+========================================================================== */
+/* ==========================================================================
+# Side area uncovering - begin
+========================================================================== */
+.mkdf-side-area-uncovered-from-content.mkdf-right-side-menu-opened .mkdf-wrapper,
+.mkdf-side-area-uncovered-from-content.mkdf-right-side-menu-opened footer.mkdf-footer-uncover,
+.mkdf-side-area-uncovered-from-content.mkdf-right-side-menu-opened .mkdf-sticky-header,
+.mkdf-side-area-uncovered-from-content.mkdf-right-side-menu-opened .mkdf-fixed-wrapper.fixed,
+.mkdf-side-area-uncovered-from-content.mkdf-right-side-menu-opened .mkdf-mobile-header-inner,
+.mkdf-side-area-uncovered-from-content.mkdf-right-side-menu-opened .mobile-header-appear .mkdf-mobile-header-inner {
+  left: -405px;
+}
+
+.mkdf-side-area-uncovered-from-content .mkdf-side-menu {
+  right: 0;
+  z-index: 90;
+}
+
+.mkdf-side-area-uncovered-from-content .mkdf-sticky-header,
+.mkdf-side-area-uncovered-from-content .mkdf-fixed-wrapper.fixed {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ==========================================================================
+# Side area uncovering - end
+========================================================================== */
+/* ==========================================================================
+# Side area slides with content style - begin
+========================================================================== */
+.mkdf-side-menu-slide-with-content {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+  -webkit-overflow-scrolling: auto !important;
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mkdf-side-menu-slide-with-content .mkdf-side-menu {
+  visibility: visible;
+}
+
+.mkdf-side-menu-slide-with-content footer.mkdf-footer-uncover,
+.mkdf-side-menu-slide-with-content .mkdf-wrapper {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mkdf-side-menu-slide-with-content .mkdf-sticky-header,
+.mkdf-side-menu-slide-with-content .mkdf-fixed-wrapper.fixed,
+.mkdf-side-menu-slide-with-content .mkdf-mobile-header-inner {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mkdf-side-menu-slide-with-content.mkdf-side-menu-open .mkdf-wrapper,
+.mkdf-side-menu-slide-with-content.mkdf-side-menu-open footer.mkdf-footer-uncover,
+.mkdf-side-menu-slide-with-content.mkdf-side-menu-open .mkdf-sticky-header,
+.mkdf-side-menu-slide-with-content.mkdf-side-menu-open .mkdf-fixed-wrapper,
+.mkdf-side-menu-slide-with-content.mkdf-side-menu-open .mkdf-mobile-header-inner {
+  left: -405px;
+}
+
+.mkdf-side-menu-slide-with-content.mkdf-side-menu-open .mkdf-side-menu {
+  right: 0;
+}
+
+/* ==========================================================================
+# Side area slides with content style - end
+========================================================================== */
+/* ==========================================================================
+# Side area responsive style - begin
+========================================================================== */
+/* ==========================================================================
+# Side area style - end
+========================================================================== */
+/* ==========================================================================
+   Side area styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=sidearea-map.css.map */

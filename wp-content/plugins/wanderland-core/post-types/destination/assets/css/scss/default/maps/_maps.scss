@@ -1,0 +1,333 @@
+/* ==========================================================================
+   Map style - begin
+   ========================================================================== */
+
+#mkdf-destination-single-map-holder {
+    height: 500px;
+}
+
+#mkdf-destination-multiple-map-holder {
+    height: 100%;
+}
+
+.mkdf-to-front {
+    z-index: 200 !important; //override GoogleMaps API inline CSS
+}
+
+.mkdf-map-marker-holder {
+    transform: translate(-50%, -100%);
+    z-index: 10;
+
+    &.mkdf-active {
+        z-index: 500;
+
+        .mkdf-map-marker {
+
+            svg {
+
+                path {
+
+                    &:first-child {
+                        fill: #3EBEB4;
+                    }
+
+                    &:last-child {
+                        fill: #51A69E;
+                    }
+                }
+            }
+        }
+    }
+
+    &#mkdf-geo-location-marker {
+
+        .mkdf-info-window {
+            display: block;
+        }
+
+        .mkdf-map-marker {
+
+            svg {
+
+                path {
+
+                    &:first-child {
+                        fill: #3EBEB4;
+                    }
+
+                    &:last-child {
+                        fill: #51A69E;
+                    }
+                }
+            }
+        }
+    }
+
+    .mkdf-map-marker {
+        position: relative;
+        width: 20px;
+        height: auto;
+        transition: all 0.15s ease-out;
+
+        .mkdf-map-marker-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+
+            path {
+                transition: fill .2s ease-in-out;
+            }
+        }
+
+        &:hover {
+
+            svg {
+
+                path {
+
+                    &:first-child {
+                        fill: #3EBEB4;
+                    }
+
+                    &:last-child {
+                        fill: #51A69E;
+                    }
+                }
+            }
+        }
+    }
+
+    .mkdf-info-window {
+        position: absolute;
+        top: -10px;
+        left: -17px;
+        display: none;
+        width: 360px;
+        background-color: #fff;
+        box-shadow: $default-box-shadow;
+        z-index: 10;
+        transition: opacity 0.3s ease;
+        transform: translate(0, -100%);
+    }
+
+    .mkdf-info-window-inner {
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -19px;
+            left: 50px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 20px 0 20px;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        .mkdf-info-window-image {
+
+            margin-right: 16px;
+
+            .icon_close {
+                position: absolute;
+                top: 9px;
+                right: 10px;
+                font-size: 18px;
+                color: #000;
+                z-index: 300;
+
+                &:after {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-color: #faf0ed;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100px;
+                height: auto;
+            }
+        }
+
+        .mkdf-info-window-details {
+
+        }
+
+        .mkdf-info-window-title {
+            position: relative;
+            margin: 0;
+            transition: color .2s ease-out;
+    
+            &:after {
+                content: '';
+                height: 2px;
+                width: 58px;
+                background-color: currentColor;
+                bottom: -10px;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+        .mkdf-info-window-categories {
+
+            a {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 10px;
+                font-weight: 500;
+                letter-spacing: .33em;
+                color: $default-heading-color;
+                font-family: $default-heading-font;
+                text-transform: uppercase;
+                padding: 0 6px 0 0;
+                margin: 0 3px 0 0;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: -2px;
+                    content: '/';
+                    color: inherit;
+                    font-size: 9px;
+                    line-height: inherit;
+                }
+
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .mkdf-info-window-excerpt {
+            font-family: $default-text-font;
+            font-weight: 400;
+            font-size: 16px;
+            color: #878787;
+            margin: 18px 0 0;
+
+            span {
+                color: inherit!important;
+            }
+        }
+
+        .mkdf-info-window-button {
+            font-weight: 500;
+            border: 1px solid #c6c6c6;
+        }
+
+        .mkdf-info-window-location {
+            margin: 3px 0 0;
+            font-family: $default-text-font;
+            font-size: 14px;
+            line-height: 1.2em;
+        }
+
+        .mkdf-info-window-link {
+            @include mkdfAbsoluteHolderLayout();
+            z-index: 5;
+
+            &:hover {
+
+                ~ .mkdf-info-window-details .mkdf-info-window-title {
+                    color: $default-text-color;
+                }
+            }
+        }
+    }
+}
+
+.mkdf-cluster-marker {
+    width: 47px;
+    height: 47px;
+    line-height: 47px;
+}
+
+.mkdf-cluster-marker .mkdf-cluster-marker-inner {
+    position: relative;
+    height: 60px;
+    width: 76px;
+    line-height: 60px;
+    background-image: url("../../assets/img/cluser_pin.png");
+}
+
+.mkdf-cluster-marker .mkdf-cluster-marker-inner .mkdf-cluster-marker-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 1px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    font-family: $default-heading-font;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Map animations START */
+@keyframes mapPinAnimationScale {
+    0% {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    50% {
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+    100% {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+}
+
+@keyframes mapPinAnimationRotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* Map animations END */
+
+/* ==========================================================================
+   Map style - end
+   ========================================================================== */

@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Outline Text shortcode style - begin
+   ========================================================================== */
+
+.mkdf-outline-text-holder {
+	@include mkdfRelativeHolderLayout(top);
+	
+	&.mkdf-ot-vertical {
+		
+		&.mkdf-ot-position-right {
+			transform: rotate(-90deg) translateY(100%);
+			
+			.mkdf-outline-text {
+				transform: translateY(100%);
+			}
+		}
+		
+		&.mkdf-ot-position-left {
+			transform: rotate(-90deg) translateY(-100%);
+			
+			.mkdf-outline-text {
+				transform: translateY(-100%);
+			}
+		}
+	}
+	
+	.mkdf-outline-text {
+		margin: 0;
+		font-family: inherit;
+		font-size: 240px;
+		line-height: 0.8em;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		color: transparent;
+		-webkit-text-stroke: 3px $first-main-color;
+		text-stroke: 3px $first-main-color;
+	}
+}
+/* ==========================================================================
+   Outline Text shortcode style - end
+   ========================================================================== */

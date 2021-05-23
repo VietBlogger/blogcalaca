@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Horizontal Timeline shortcode style - begin
+   ========================================================================== */
+.mkdf-horizontal-timeline-wrapper {
+	padding: 80px 0 30px;
+	cursor: -webkit-grab;
+	
+	.mkdf-horizontal-timeline {
+		@include mkdfRelativeHolderLayout(middle);
+		width: 0;
+		height: 217px;
+		background: url('img/timeline.svg') top left repeat-x;
+		
+		.mkdf-ht-content-item {
+			min-width: 190px;
+			min-height: 108px;
+			opacity: 0;
+			position: absolute;
+			bottom: -14px;
+			left: 0;
+			transform: translateX(-66px) translateY(-20px);  //66px is width of image, padding, and half of pin width
+
+			.mkdf-hti-content-item-inner {
+
+				.mkdf-hti-pin {
+					transition: .2s;
+				}
+
+				&:hover {
+					.mkdf-hti-pin {
+						transform: scale(.7);
+					}
+				}
+			}
+			
+			.mkdf-hti-content-item-wrap {
+				display: table;
+				margin-top: 20px;
+				
+				.mkdf-hti-content-image,
+				.mkdf-hti-content-value {
+					display: table-cell;
+					vertical-align: middle;
+				}
+				
+				.mkdf-hti-content-image {
+					width: 105px;
+					max-height: 65px;
+				}
+				
+				.mkdf-hti-content-value {
+					
+					padding-left: 10px;
+					
+					.mkdf-hti-title,
+					.mkdf-hti-subtitle {
+						margin: 0;
+					}
+					
+					.mkdf-hti-label-one,
+					.mkdf-hti-label-two {
+						font-family: $default-heading-font;
+						font-weight: 400;
+						font-size: 15px;
+						color: $first-main-color;
+						text-transform: uppercase;
+						margin: 0;
+						line-height: 18px;
+					}
+				}
+			}
+			
+			$number: 0;
+			@for $i from 1 through  40 {
+				@if ($i+3) % 4 == 0 {
+					$number: $number + 1;
+					$counter: $i;
+					&:nth-child(#{$counter}) {
+						left: 1571px * ($number - 1) + 190px;
+					}
+				}
+			}
+			
+			$number: 0;
+			@for $i from 1 through  40 {
+				@if ($i+3) % 4 == 1 {
+					$number: $number + 1;
+					$counter: $i;
+					&:nth-child(#{$counter}) {
+						left: 1571px * ($number - 1) + 700px;
+					}
+				}
+			}
+			
+			$number: 0;
+			@for $i from 1 through  40 {
+				@if ($i+3) % 4 == 2 {
+					$number: $number + 1;
+					$counter: $i;
+					&:nth-child(#{$counter}) {
+						left: 1571px * ($number - 1) + 1070px;
+					}
+				}
+			}
+			
+			$number: 0;
+			@for $i from 1 through  40 {
+				@if ($i+3) % 4 == 3 {
+					$number: $number + 1;
+					$counter: $i;
+					&:nth-child(#{$counter}) {
+						left: 1571px * ($number - 1) + 1500px;
+					}
+				}
+			}
+			
+			.mkdf-hti-pin {
+				width: 20px;
+				height: 20px;
+				margin-left: 55px;
+				border-radius: 50%;
+				background-color: $first-main-color;
+			}
+			
+			&:nth-child(4n+2) {
+				bottom: calc(100% - 20px);
+			}
+			
+			&:nth-child(4n+1) {
+				bottom: 70px;
+			}
+			
+			&:nth-child(4n+4) {
+				bottom: calc(100% - 50px);
+			}
+			
+		}
+	}
+}
+
+/* ==========================================================================
+   Horizontal Timeline shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,320 @@
+/* ==========================================================================
+   Destination Single page style - begin
+   ========================================================================== */
+.single-destination-item {
+	.mkdf-ds-image-inner {
+		margin-bottom: 50px;
+	}
+}
+
+.mkdf-destination-single-holder {
+	margin: 0 0 50px;
+
+	.mkdf-author-description-image {
+		@include ipad-landscape {
+			margin-bottom: 0;
+		}
+	}
+	
+    .mkdf-ds-image-holder {
+	    @include mkdfRelativeHolderLayout();
+	    
+	    .mkdf-ds-image {
+		    
+		    &:not(.mkdf-item-space) {
+			    @include mkdfRelativeHolderLayout();
+			    box-sizing: border-box;
+		    }
+		    
+		    a, img {
+			    position: relative;
+			    display: block;
+		    }
+	    }
+    }
+	
+	.mkdf-ds-info-holder {
+		@include mkdfRelativeHolderLayout();
+		
+		.mkdf-ds-info-item {
+			@include mkdfRelativeHolderLayout();
+			margin: 0 0 10px;
+			
+			p, a {
+				margin: 0;
+			}
+		}
+		
+		.mkdf-ds-info-title {
+			margin: 0;
+		}
+	}
+	
+	.mkdf-destination-single-info-bottom {
+		@include mkdfRelativeHolderLayout();
+		padding-top: 48px;
+		
+		.mkdf-ds-categories {
+			font-family: $additional-font;
+			font-style: italic;
+			font-size: 18px;
+			line-height: 2em;
+			
+			&:before {
+				content: "\e017";
+				font-family: "eleganticons";
+				position: relative;
+				top: -2px;
+				padding-right: 7px;
+				color: $default-heading-color;
+				font-style: normal;
+				vertical-align: middle;
+			}
+			
+			a {
+				position: relative;
+				color: $default-text-color;
+				
+				&:hover {
+					color: $first-main-color;
+					&:before {
+						transform: scaleX(1);
+						transform-origin: 0 0;
+						transition: transform .5s cubic-bezier(0.45, 0.46, 0.05, 0.96);
+					}
+				}
+				
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 1px;
+					width: 100%;
+					height: 1px;
+					background-color: currentColor;
+					transform: scaleX(0);
+					transform-origin: 100% 0;
+					transition: transform .3s cubic-bezier(0.45, 0.46, 0.05, 0.96);
+				}
+			}
+			
+			.mkdf-ds-info-category:not(:last-child) {
+				&:after {
+					content: ',';
+				}
+			}
+		}
+		
+		.mkdf-destination-single-info-bottom-left,
+		.mkdf-destination-single-info-bottom-right {
+			@include mkdfRelativeHolderLayout();
+		}
+		
+		@media only screen and (min-width: $ipad-portrait-plus-pixel) {
+			
+			.mkdf-destination-single-info-bottom-left,
+			.mkdf-destination-single-info-bottom-right {
+				width: 50%;
+			}
+			
+			.mkdf-destination-single-info-bottom-left {
+				float: left;
+			}
+			
+			.mkdf-destination-single-info-bottom-right {
+				text-align: right;
+				float: right;
+			}
+		}
+		
+		.mkdf-destination-single-info-bottom-right {
+			
+			> div {
+				margin-left: 17px;
+				
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.mkdf-ms-explorer {
+	.mkdf-single-destination-sidebar .mkdf-ds-sidebar-top .mkdf-ds-sidebar-img .mkdf-ds-sidebar-title-holder .mkdf-ds-sidebar-title-holder-inner .mkdf-ds-item-title {
+		svg {
+			display: none;
+		}
+	}
+}
+
+.mkdf-single-destination-sidebar {
+	.mkdf-ds-sidebar-top {
+		
+		.mkdf-ds-sidebar-img {
+			position: relative;
+			margin-bottom: 20px;
+			margin-top: 35px;
+			
+			img {
+				display: block;
+			}
+			
+			.mkdf-ds-sidebar-title-holder {
+				@include mkdfAbsoluteHolderLayout();
+				
+				.mkdf-ds-sidebar-title-holder-inner {
+					@include mkdfTableLayout();
+					
+					.mkdf-ds-item-title {
+						position: relative;
+						display: table-cell;
+						vertical-align: middle;
+						text-align: center;
+						height: 100%;
+						width: 100%;
+						color: #fff;
+						transition: opacity .2s ease-out;
+						
+						.mkdf-active-hover-middle {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							border-radius: 2px;
+							background-color: currentColor;
+						}
+						
+						svg {
+							position: absolute;
+							top: 0;
+							height: 100%;
+							
+							polygon {
+								fill: currentColor;
+								stroke: currentColor;
+							}
+							
+							&.mkdf-active-hover-left {
+								left: -12px;
+							}
+							
+							&.mkdf-active-hover-right {
+								right: -12px;
+							}
+						}
+						
+						> span {
+							position: relative;
+							display: inline-block;
+							min-width: 68%;
+							line-height: 2.6em;
+							
+							@include ipad-landscape {
+								min-width: 40%;
+							}
+							@include phone-landscape {
+								min-width: 68%;
+							}
+							
+							.mkdf-ds-title-wrap {
+								position: relative;
+								z-index: 1;
+								color: $default-heading-color;
+								top: -4px;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		.mkdf-destination-sidebar-button {
+			text-align: center;
+			margin-bottom: 55px;
+		}
+	}
+	
+	.mkdf-destination-single-additional-sidebar {
+		
+		> h6 {
+			position: relative;
+			margin: 0 0 28px 83px;
+		}
+		
+		.mkdf-ds-custom-field {
+			margin-left: 22px;
+			margin-bottom: 15px;
+			
+			a {
+				color: $default-text-color;
+				
+				&:hover {
+					color: $first-main-color;
+					
+					span:before {
+						width: 100%;
+						transition: all .2s ease;
+					}
+				}
+			}
+			
+			img,
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+			.mkdf-destination-custom-field-image {
+				max-width: 44px;
+			}
+			span {
+				position: relative;
+				font-family: $additional-font;
+				font-style: italic;
+				font-size: 18px;
+				font-weight: 400;
+				margin-left: 4px;
+				
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 5px;
+					width: 0;
+					height: 1px;
+					background-color: $first-main-color;
+					transition: all .2s ease;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - begin
+   ========================================================================== */
+
+.mkdf-destination-single-holder {
+	
+	.mkdf-ds-image-holder {
+		
+		&.mkdf-grid-masonry-list {
+			
+			.mkdf-ds-image {
+				
+				a {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */

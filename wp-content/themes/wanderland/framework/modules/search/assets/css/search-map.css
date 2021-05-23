@@ -1,0 +1,404 @@
+/* ==========================================================================
+   Search styles - begin
+   ========================================================================== */
+/* ==========================================================================
+# Search opener - begin
+========================================================================== */
+.mkdf-search-opener {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 1;
+  margin: 0 10px;
+}
+
+.mkdf-search-opener .mkdf-search-opener-wrapper {
+  display: block;
+}
+
+.mkdf-search-opener .mkdf-search-opener-wrapper > * {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: inherit;
+}
+
+.mkdf-search-opener .mkdf-search-opener-wrapper > *:before {
+  display: block;
+  line-height: inherit;
+}
+
+.mkdf-search-opener.mkdf-search-opener-svg-path .mkdf-search-opener-wrapper > * {
+  vertical-align: middle;
+}
+
+.mkdf-search-opener.mkdf-search-opener-svg-path .mkdf-search-opener-wrapper > *,
+.mkdf-search-opener.mkdf-search-opener-svg-path .mkdf-search-opener-wrapper path {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-search-opener,
+.mkdf-light-header .mkdf-top-bar .mkdf-search-opener {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-search-opener:hover,
+.mkdf-light-header .mkdf-top-bar .mkdf-search-opener:hover {
+  color: #e1e1e1 !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-search-opener,
+.mkdf-dark-header .mkdf-top-bar .mkdf-search-opener {
+  color: #1e1e1e !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-search-opener:hover,
+.mkdf-dark-header .mkdf-top-bar .mkdf-search-opener:hover {
+  color: #59815b !important;
+}
+
+/* ==========================================================================
+# Search opener - end
+========================================================================== */
+/* ==========================================================================
+# Search template style - begin
+========================================================================== */
+.mkdf-search-page-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 80px;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 30px;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-search-title {
+  margin: 0 0 20px;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-search-label {
+  display: block;
+  font-size: 13px;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 10px;
+  clear: both;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-column-left {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-column-right {
+  display: table-cell;
+  width: 1%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-search-field {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 20px 0 3px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-search-field::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-search-field:-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-search-field::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-search-field:-ms-input-placeholder {
+  color: inherit;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-search-submit {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  font-size: 18px;
+  color: #878787;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+
+.mkdf-search-page-holder .mkdf-search-page-form .mkdf-form-holder .mkdf-search-submit:hover {
+  color: #1e1e1e;
+}
+
+.mkdf-search-page-holder article {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 30px 0;
+  margin: 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.mkdf-search-page-holder article.sticky .mkdf-post-title a {
+  color: #59815b;
+}
+
+.mkdf-search-page-holder article.page .mkdf-post-title-area .mkdf-post-info > div.mkdf-post-info-category {
+  display: none;
+}
+
+.mkdf-search-page-holder article .mkdf-post-content {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.mkdf-search-page-holder article .mkdf-post-image {
+  display: block;
+  float: left;
+  width: 130px;
+}
+
+.mkdf-search-page-holder article .mkdf-post-image a, .mkdf-search-page-holder article .mkdf-post-image img {
+  display: block;
+}
+
+.mkdf-search-page-holder article .mkdf-post-title-area {
+  min-height: 130px;
+  padding: 0 0 0 150px;
+}
+
+.mkdf-search-page-holder article .mkdf-post-title-area.mkdf-no-thumbnail {
+  padding: 0;
+  min-height: inherit;
+}
+
+.mkdf-search-page-holder article .mkdf-post-title-area .mkdf-post-title-area-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mkdf-search-page-holder article .mkdf-post-title-area .mkdf-post-title-area-inner .mkdf-post-title {
+  margin: 0;
+}
+
+.mkdf-search-page-holder article .mkdf-post-title-area .mkdf-post-title-area-inner .mkdf-post-excerpt {
+  margin: 7px 0 0;
+}
+
+.mkdf-search-page-holder .mkdf-blog-pagination {
+  margin: 50px 0 0;
+}
+
+/* ==========================================================================
+# Search template style - end
+========================================================================== */
+.mkdf-search-opener-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mkdf-search-opener-holder .mkdf-search-opener {
+  z-index: 15;
+  min-width: 88px;
+  text-align: right;
+}
+
+.mkdf-search-opener-holder .mkdf-search-opener .mkdf-search-icon-text {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-right: 9px;
+  opacity: 1;
+  -webkit-transition: opacity .3s ease .2s;
+  -o-transition: opacity .3s ease .2s;
+  transition: opacity .3s ease .2s;
+  display: inline-block;
+}
+
+.mkdf-search-opener-holder .mkdf-search-opener:before {
+  display: none;
+}
+
+.mkdf-search-opener-holder .mkdf-on-side-search-form {
+  position: absolute;
+  right: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+
+.mkdf-search-opener-holder .mkdf-on-side-search-form .mkdf-field-holder input[type=text] {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding: 0 20px 0 7px;
+  line-height: 30px;
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  color: #888888;
+  border: none;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.mkdf-ms-explorer .mkdf-search-opener-holder .mkdf-on-side-search-form .mkdf-field-holder input[type=text] {
+  height: 40px;
+}
+
+.mkdf-search-opener-holder .mkdf-on-side-search-form .mkdf-field-holder input[type=text]:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.mkdf-search-opener-holder .mkdf-on-side-search-form button {
+  position: absolute;
+  width: 40px;
+  float: left;
+  color: #1e1e1e;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all .3s .2s;
+  -o-transition: all .3s .2s;
+  transition: all .3s .2s;
+  z-index: 10;
+  display: none;
+}
+
+.mkdf-search-opener-holder .mkdf-on-side-search-form button .mkdf-onside-btn-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.mkdf-search-opener-holder.opened .mkdf-on-side-search-form {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  -webkit-transition: 0.3s cubic-bezier(0, 1.03, 0, 0.96);
+  -o-transition: 0.3s cubic-bezier(0, 1.03, 0, 0.96);
+  transition: 0.3s cubic-bezier(0, 1.03, 0, 0.96);
+}
+
+.mkdf-search-opener-holder.opened .mkdf-on-side-search-form:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: currentColor;
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+.mkdf-search-opener-holder.opened .mkdf-search-icon-text {
+  opacity: 0;
+  -webkit-transition: opacity 0s;
+  -o-transition: opacity 0s;
+  transition: opacity 0s;
+  display: none;
+}
+
+.mkdf-search-opener-holder.opened button {
+  z-index: 20;
+  right: -4px;
+  top: 0;
+  height: 100%;
+  display: block;
+  width: 25px;
+}
+
+.mkdf-header-centered-logo-down .mkdf-search-opener-holder:before {
+  background-color: #959595;
+}
+
+.mkdf-light-header .mkdf-search-opener-holder:before {
+  background-color: #fff;
+}
+
+.mkdf-light-header .mkdf-search-opener-holder .mkdf-on-side-search-form:before {
+  background-color: #fff;
+}
+
+.mkdf-light-header .mkdf-search-opener-holder .mkdf-on-side-search-form .mkdf-field-holder input[type=text] {
+  color: #fff;
+}
+
+.mkdf-light-header .mkdf-search-opener-holder .mkdf-on-side-search-form .mkdf-field-holder input[type=text]::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.mkdf-light-header .mkdf-search-opener-holder .mkdf-on-side-search-form .mkdf-field-holder input[type=text]:-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.mkdf-light-header .mkdf-search-opener-holder .mkdf-on-side-search-form .mkdf-field-holder input[type=text]::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.mkdf-light-header .mkdf-search-opener-holder .mkdf-on-side-search-form .mkdf-field-holder input[type=text]:-ms-input-placeholder {
+  color: inherit;
+}
+
+/* ==========================================================================
+   Search styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=search-map.css.map */

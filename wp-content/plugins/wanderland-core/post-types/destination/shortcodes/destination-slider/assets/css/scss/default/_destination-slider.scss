@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Portfolio Slider shortcode style - begin
+   ========================================================================== */
+
+.mkdf-destination-slider-holder {
+	@include mkdfRelativeHolderLayout();
+
+	.mkdf-destination-list-holder {
+		
+		&.mkdf-one-columns {
+			
+			article .mkdf-dli-text .mkdf-dli-text-inner {
+				max-width: 40%;
+				left: 20%;
+				padding: 30px;
+				
+				@include ipad-landscape {
+					max-width: 60%;
+					left: 0;
+				}
+				
+				@include ipad-portrait {
+					max-width: 75%;
+				}
+				
+				@include phone-landscape {
+					max-width: 100%;
+					width: auto;
+				}
+				
+				svg {
+					&.mkdf-active-hover-left {
+						left: -30px;
+						right: auto;
+					}
+					
+					&.mkdf-active-hover-right {
+						right: -30px;
+						left: auto;
+					}
+				}
+			}
+
+			.mkdf-dli-text-holder {
+				clip-path: inset(0 100% 0 0);
+				-webkit-clip-path: inset(0 100% 0 0);
+				transition: 1s .2s cubic-bezier(0.32, 0.27, 0, 1.18);
+				transform: translateX(50px);
+				will-change: transform;
+				z-index: 1234;
+				pointer-events: none;
+				
+				.mkdf-dli-btn-holder {
+					pointer-events: all;
+				}
+			}
+
+			.owl-item.active .mkdf-dli-text-holder {
+				clip-path: inset(0 0 0 0);
+				-webkit-clip-path: inset(0 0 0 0);
+				transform: translateX(0);
+			}
+
+			.mkdf-dli-image img {
+				transform: scale(1.16);
+			}
+		}
+
+		&.mkdf-nav-light-skin {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					color: $header-light-color;
+					
+					&:hover {
+						color: $header-light-hover-color;
+					}
+				}
+			}
+		}
+
+		&.mkdf-nav-dark-skin {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					color: $header-dark-color;
+					
+					&:hover {
+						color: $header-dark-hover-color;
+					}
+				}
+			}
+		}
+
+		&.mkdf-pag-light-skin {
+
+			.owl-dots {
+
+				.owl-dot {
+
+					span {
+						background-color: rgba($header-light-color, .2);
+					}
+
+					&.active,
+					&:hover {
+
+						span {
+							background-color: $header-light-hover-color;
+						}
+					}
+				}
+			}
+		}
+
+		&.mkdf-pag-dark-skin {
+
+			.owl-dots {
+
+				.owl-dot {
+
+					span {
+						background-color: rgba($header-dark-color, .2);
+					}
+
+					&.active,
+					&:hover {
+
+						span {
+							background-color: $header-dark-hover-color;
+						}
+					}
+				}
+			}
+		}
+
+		&.mkdf-pag-on-slider {
+
+			.owl-nav {
+
+				.owl-prev,
+				.owl-next {
+					transform: translateY(-50%);
+				}
+			}
+
+			.owl-dots {
+				position: absolute;
+				left: 0;
+				bottom: 20px;
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Slider shortcode style - end
+   ========================================================================== */

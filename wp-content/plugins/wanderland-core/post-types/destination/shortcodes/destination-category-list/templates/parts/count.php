@@ -1,0 +1,1 @@
+<p class="mkdf-dcli-count"><?php echo esc_html( $count ); ?></p>

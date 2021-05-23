@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Section Title shortcode styles - begin
+   ========================================================================== */
+
+.mkdf-section-title-holder {
+    @include mkdfRelativeHolderLayout();
+	box-sizing: border-box;
+
+	&.mkdf-st-highlight {
+
+		.mkdf-st-highlight-title-holder {
+			@include mkdfSVGbg(currentColor);
+			position: relative;
+			display: inline-block;
+
+			.mkdf-st-highlight-title {
+				padding: 0 10px 0 5px;
+				position: relative;
+				color: #fff;
+				z-index: 1;
+			}
+		}
+	}
+
+	&.mkdf-center-align {
+		.mkdf-st-title:after {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&.mkdf-right-align {
+		.mkdf-st-title:after {
+			right: 0;
+			left: auto;
+		}
+	}
+
+	.mkdf-st-tagline {
+		font-family: $additional-font;
+		font-style: italic;
+		color: $default-text-color;
+		font-size: 21px;
+		line-height: 1.2em;
+		font-weight: 400;
+		display: block;
+		margin-bottom: 3px;
+	}
+	
+    .mkdf-st-title {
+        margin: 0 0 14px;
+		position: relative;
+		text-transform: uppercase;
+    }
+    
+    .mkdf-st-text {
+	    display: block;
+        margin: 0;
+		line-height: 26px;
+		font-weight: 600;
+	    
+	    .mkdf-st-bold {
+		    font-weight: 700;
+	    }
+
+	    .mkdf-row-above-footer & {
+		    &.mkdf-text-highlight {
+			    font-family: $additional-font;
+			    font-style: italic;
+			    font-size: 22px;
+			    color: #999;
+			    line-height: 32px;
+		    }
+	    }
+    }
+	
+	.mkdf-st-button {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		
+		.mkdf-btn {
+			margin-top: 29px;
+			@include mkdfButtonSolidColor();
+			@include mkdfButtonSize();
+
+			&:hover {
+				@include mkdfButtonSolidHoverColor();
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */
+
+

@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Portfolio Single page responsive style - begin
+   ========================================================================== */
+
+.mkdf-destination-single-holder {
+	
+    .mkdf-ds-image-holder {
+	    
+	    &.mkdf-ds-gallery-images {
+		
+		    @include phone-landscape {
+			
+			    .mkdf-ds-image {
+				    width: 100% !important; // !important is set to override all other stronger selectors
+			    }
+		    }
+		
+		    /***** Columns Layout - end *****/
+	    }
+    }
+	
+	@include ipad-landscape {
+		
+		.mkdf-ds-info-holder {
+			margin: 30px 0 0 !important; // can be set inline in option
+		}
+	}
+	
+	@include ipad-portrait {
+		.mkdf-destination-single-info-bottom {
+			padding-top: 20px;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page responsive style - end
+   ========================================================================== */

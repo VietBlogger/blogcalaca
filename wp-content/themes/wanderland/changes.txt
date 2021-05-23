@@ -1,0 +1,15 @@
+1.2.1
+- Fixed Instagram Feed for bussiness accounts
+- Updated Wanderland Instagram Feed plugin to 2.1
+- Updated WPBakery Visual Composer plugin to 6.4.1
+
+1.2
+- Updated Wanderland Instagram Feed plugin to 2.0
+- Updated Revolution Slider plugin to 6.2.23
+- Updated WPBakery Visual Composer plugin to 6.4.0
+
+1.1
+- Added WordPress 5.5 compatibility
+- Updated Wanderland Core plugin to 1.0.1
+- Updated Revolution Slider plugin to 6.2.22
+- Updated WPBakery Visual Composer plugin to 6.3.0

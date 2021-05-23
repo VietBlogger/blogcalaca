@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Author shortcode style - begin
+   ========================================================================== */
+
+.mkdf-author-holder {
+    display: flex;
+	align-items: center;
+
+	a {
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			.mkdf-author-title {
+				color: $first-main-color;
+				transition: all .2s ease;
+			}
+		}
+	}
+
+	@include phone-landscape {
+		display: block;
+
+		a {
+			display: block;
+		}
+	}
+	
+	.mkdf-author-image {
+		position: relative;
+
+		img {
+			position: relative;
+			display: block;
+			width: 100%;
+
+			+ img {
+				position: absolute;
+				top: 23px;
+				left: 22px;
+				transform: rotate(-11.5deg);
+				width: 75%;
+				height: 66%;
+				z-index: -1;
+
+				@include phone-landscape {
+					top: 11%;
+					left: 11%;
+				}
+			}
+		}
+	}
+	
+	.mkdf-author-text-holder {
+		z-index: 50;
+		position: relative;
+		@include mkdfSVGbg(#f2f1ea);
+
+		@include phone-landscape {
+			display: inline-block;
+			margin: 0 !important;
+		}
+
+		.mkdf-author-text-wrapper {
+			padding: 6px 20px 12px;
+		}
+	}
+
+	.mkdf-author-title,
+	.mkdf-author-text {
+		position: relative;
+		z-index: 60;
+	}
+	
+	.mkdf-author-title {
+		margin: 0;
+		transition: all .2s ease-out;
+	}
+	
+	.mkdf-author-text {
+		margin: 0;
+		font-family: $additional-font;
+		font-size: 18px;
+		font-style: italic;
+		color: $default-text-color;
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-custom-link {
+		.mkdf-author-image {
+			a {
+				@include mkdfImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+}
+/* ==========================================================================
+   Author shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,378 @@
+/* ==========================================================================
+   Portfolio shortcode style - begin
+   ========================================================================== */
+.mkdf-ms-explorer {
+	.mkdf-destination-list-holder article .mkdf-dli-text .mkdf-dli-title{
+		svg {
+			top: 2px;
+			height: 96%;
+
+			&.mkdf-active-hover-left {
+				left: -5em;
+			}
+
+			&.mkdf-active-hover-right {
+				right: -5em;
+			}
+		}
+	}
+}
+
+.mkdf-destination-list-holder {
+    @include mkdfRelativeHolderLayout();
+
+	/***** Article Global Style - begin *****/
+
+    article {
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+
+	    .mkdf-dl-item-inner {
+		    @include mkdfRelativeHolderLayout();
+	    }
+	    
+	    .mkdf-dli-image {
+		    @include mkdfRelativeHolderLayout();
+		    
+		    img {
+			    display: block;
+			    width: 100%;
+		    }
+	    }
+
+	    .mkdf-dli-link {
+		    @include mkdfAbsoluteHolderLayout();
+	    }
+
+	    .mkdf-dli-text-wrapper {
+	        @include mkdfTableLayout();
+	    }
+
+	    .mkdf-dli-text {
+		    @include mkdfTableCellLayout();
+		    
+		    .mkdf-dli-text-inner {
+			    position: relative;
+			    display: inline-block;
+			    background-color: #fff;
+			    padding: 20px 30px;
+			    box-sizing: border-box;
+			
+			    @include phone-landscape {
+				    width: auto;
+			    }
+			
+			    svg {
+				    position: absolute;
+				    height: 100%;
+				    top: 0;
+				
+				    polygon {
+					    fill: #fff;
+					    stroke: #fff;
+				    }
+				
+				    &.mkdf-active-hover-left {
+					    right: 99%;
+					
+					    @include phone-landscape {
+						    right: 90%;
+					    }
+				    }
+				
+				    &.mkdf-active-hover-right {
+					    left: 99%;
+					    @include phone-landscape {
+						    left: 90%;
+					    }
+				    }
+			    }
+		    }
+
+		    .mkdf-dli-title {
+			    position: relative;
+				margin: 0;
+			    color: #fff;
+			    
+			    > span {
+				    
+				    .mkdf-dli-title-wrap {
+					    position: relative;
+					    z-index: 1;
+					    color: $default-heading-color;
+				    }
+			    }
+		    }
+
+		    .mkdf-dli-category-holder {
+			    position: relative;
+			    display: block;
+			    margin: 3px 0 6px;
+			    font-size: 21px;
+			    font-style: italic;
+			    font-weight: 400;
+			    font-family: $additional-font;
+			    
+			    @include phone-landscape {
+				    display: none;
+			    }
+
+			    a {
+				    position: relative;
+				    display: inline-block;
+				    vertical-align: middle;
+				    padding: 0 6px 0 0;
+				    margin: 0 3px 0 0;
+				    z-index: 8;
+				    
+				    &:after {
+					    position: absolute;
+					    top: 0;
+					    right: -4px;
+					    content: '/';
+					    color: inherit;
+					    font-size: 12px;
+					    line-height: inherit;
+				    }
+
+				    &:last-child {
+					    margin: 0;
+					    padding: 0;
+					    
+					    &:after {
+						    display: none;
+					    }
+				    }
+			    }
+		    }
+		    
+		    .mkdf-dli-btn-holder {
+			    position: relative;
+			
+			    @include phone-landscape {
+				    display: none;
+			    }
+		    }
+		    
+		    .mkdf-dli-excerpt {
+			    position: relative;
+			    font-size: 18px;
+			    margin: 16px 0 18px;
+			
+			    @include phone-landscape {
+				    display: none;
+			    }
+		    }
+		    
+		    .mkdf-btn {
+			    z-index: 8;
+		    }
+	    }
+    }
+
+	/***** Article Global Style - end *****/
+	
+	/***** Specific Global Style - begin *****/
+	
+	&.mkdf-dl-has-shadow {
+		
+		article {
+			
+			.mkdf-dli-image {
+				box-shadow: $default-box-shadow;
+			}
+		}
+	}
+	
+	&.mkdf-dl-has-filter {
+		
+		.mkdf-dl-inner {
+			overflow: hidden;
+		}
+	}
+	
+	&.mkdf-dl-no-content {
+		
+		.mkdf-dli-text-holder {
+			display: none;
+		}
+	}
+	/***** Specific Global Style - end *****/
+	
+	&.mkdf-dl-masonry {
+
+        &.mkdf-fixed-masonry-items {
+	        
+            article {
+	            
+                .mkdf-dl-item-inner,
+                .mkdf-dli-image {
+		            height: 100%;
+	            }
+            }
+        }
+	}
+
+	/***** Portfolio Types - end *****/
+
+	/***** Additional Features - begin *****/
+
+	&.mkdf-dl-has-animation {
+
+		article {
+			opacity: 0;
+			transform: translateY(80px);
+			transition: opacity .8s cubic-bezier(0.34, 0.52, 0.57, 1.04), transform .8s cubic-bezier(0.34, 0.52, 0.57, 1.04);
+
+			&.mkdf-item-show {
+				opacity: 1;
+				transform: translateY(0);
+
+				&.mkdf-item-shown {
+					transition: none;
+				}
+			}
+			
+			.touch & {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	/***** Additional Features - end *****/
+}
+
+/* ==========================================================================
+   Portfolio shortcode style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio standard pagination style - begin
+   ========================================================================== */
+
+.mkdf-destination-list-holder {
+	
+	&.mkdf-dl-pag-standard {
+		
+		.mkdf-dl-inner {
+			opacity: 1;
+			transition: opacity .2s ease-out;
+		}
+		
+		&.mkdf-dl-pag-standard-animate {
+			
+			.mkdf-dl-inner {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.mkdf-dl-standard-pagination {
+	@include mkdfStandardPaginationStyle('shortcode');
+}
+/* ==========================================================================
+   Portfolio standard pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio load more pagination style - begin
+   ========================================================================== */
+
+.mkdf-dl-load-more-holder {
+	@include mkdfRelativeHolderLayout();
+
+    .mkdf-dl-load-more {
+	    margin: 60px 0 0;
+	    text-align: center;
+    }
+}
+/* ==========================================================================
+   Portfolio load more pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio loading element style - begin
+   ========================================================================== */
+
+.mkdf-dl-loading {
+	position: relative;
+	display: none;
+	width: 100%;
+	margin: 40px 0 20px;
+	color: $default-heading-color;
+	text-align: center;
+
+	&.mkdf-filter-trigger {
+		position: absolute;
+		top: 250px;
+		left: 0;
+	}
+	
+    &.mkdf-standard-pag-trigger {
+		position: absolute;
+		top: 50px;
+		left: 0;
+	
+	    .mkdf-dl-has-filter & {
+		    top: 150px;
+	    }
+    }
+
+	&.mkdf-showing {
+		display: block;
+	}
+
+	> div {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 14px;
+		height: 14px;
+		margin: 0 3px;
+		background-color: $default-heading-color;
+		border-radius: 100%;
+		animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	}
+
+	.mkdf-dl-loading-bounce1 {
+		animation-delay: -0.32s;
+	}
+
+	.mkdf-dl-loading-bounce2 {
+		animation-delay: -0.16s;
+	}
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1.0);
+	}
+}
+
+@-moz-keyframes sk-bouncedelay {
+	0%, 80%, 100% {
+		-moz-transform: scale(0);
+	}
+	40% {
+		-moz-transform: scale(1.0);
+	}
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% {
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1.0);
+	}
+}
+/* ==========================================================================
+   Portfolio loading element style - end
+   ========================================================================== */

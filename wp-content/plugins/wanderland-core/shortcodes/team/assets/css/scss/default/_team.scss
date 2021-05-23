@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Team shortcode style - begin
+   ========================================================================== */
+
+.mkdf-team-holder {
+    @include mkdfRelativeHolderLayout();
+
+    .mkdf-team-image {
+	    position: relative;
+	    display: inline-block;
+		vertical-align: middle;
+
+		img {
+			.mkdf-safari & {
+				transform: none !important;
+			}
+		}		
+    }
+	
+	.mkdf-team-info {
+		@include mkdfRelativeHolderLayout();
+		margin: 26px 0 0;
+	}
+	
+	.mkdf-team-text-wrapper {
+		position: absolute;
+		bottom: 40px;
+		right: 70px;
+		text-align: center;
+		z-index: 1;
+		transform: translateZ(0);
+	}
+	
+	.mkdf-team-text-outer {
+		position: relative;
+		display: table;
+		table-layout: fixed;
+	}
+	
+	.mkdf-team-text-inner {
+		position: relative;
+		display: table-cell;
+		
+		.mkdf-team-text-background {
+			position: relative;
+			display: inline-block;
+			background-color: #fff;
+			padding: 20px 10px;
+			box-sizing: border-box;
+			
+			@include phone-landscape {
+				width: auto;
+			}
+			
+			svg {
+				position: absolute;
+				height: 100%;
+				top: 0;
+				
+				polygon {
+					fill: #fff;
+					stroke: #fff;
+				}
+				
+				&.mkdf-active-hover-left {
+					right: 100%;
+					
+					@include phone-landscape {
+						right: 90%;
+					}
+				}
+				
+				&.mkdf-active-hover-right {
+					left: 100%;
+					@include phone-landscape {
+						left: 90%;
+					}
+				}
+			}
+		}
+		
+		.qodef-m-position {
+			position: relative;
+			display: block;
+			margin: 3px 0 6px;
+			font-size: 21px;
+			font-style: italic;
+			font-weight: 400;
+			font-family: $additional-font;
+		}
+		
+		.mkdf-team-name {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			color: #fff;
+			
+			> span {
+				
+				.mkdf-team-title-wrap {
+					position: relative;
+					z-index: 1;
+					color: $default-heading-color;
+				}
+			}
+		}
+	}
+
+    .mkdf-team-link {
+        @include mkdfAbsoluteHolderLayout();
+	    z-index: 10;
+    }
+
+}
+/* ==========================================================================
+   Team shortcode style - end
+   ========================================================================== */
